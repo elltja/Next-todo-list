@@ -99,7 +99,7 @@ export default function TodoBox() {
         <input
           type="text"
           name="todo"
-          className="py-2 px-4 rounded-md flex-1"
+          className="py-2 px-4 rounded-md flex-1 text-foreground"
           placeholder="Input task here"
           ref={inputRef}
         />

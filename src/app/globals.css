@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --surface: #f4f4f4;
+  --elevated-surface: #e0e0e0;
   --primary: #1f5ac7;
 }
 

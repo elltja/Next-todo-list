@@ -30,6 +30,7 @@ This is a simple Todo application that allows users to add, toggle, and delete t
    ```env
     SUPABASE_URL=your-supabase-url
     SUPABASE_ANON_KEY=your-supabase-anon-key
+    NODE_ENV=development
    ```
 
 4. Run the project:
