@@ -96,11 +96,11 @@ export default function TodoBox() {
 
   return (
     <div className="max-w-screen-md flex-1 h-fit bg-surface rounded-md flex flex-col items-center gap-5 py-5">
-      <Form action={add} className="flex gap-2 w-11/12 text-black">
+      <Form action={add} className="flex gap-2 w-11/12">
         <input
           type="text"
           name="todo"
-          className="py-2 px-4 rounded-md flex-1 text-foreground"
+          className="py-2 px-4 rounded-md flex-1 text-black"
           placeholder="Input task here"
           ref={inputRef}
         />
