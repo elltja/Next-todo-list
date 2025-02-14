@@ -62,6 +62,7 @@ export default function TodoBox() {
       await addAction(newTodo);
       setTodos((prev) => [...prev, newTodo]);
     } catch (err) {
+      console.error(err);
       setOptimisticTodos((prev) =>
         prev.filter((todo) => todo.id !== newTodo.id)
       );
