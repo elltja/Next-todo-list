@@ -15,6 +15,7 @@ import {
   getAction,
   toggleAction,
 } from "@/lib/actions";
+import Form from "next/form";
 
 export default function TodoBox() {
   const [todos, setTodos] = useState<TodoType[]>([]);
@@ -95,7 +96,7 @@ export default function TodoBox() {
 
   return (
     <div className="max-w-screen-md flex-1 h-fit bg-surface rounded-md flex flex-col items-center gap-5 py-5">
-      <form action={add} className="flex gap-2 w-11/12 text-background">
+      <Form action={add} className="flex gap-2 w-11/12 text-black">
         <input
           type="text"
           name="todo"
@@ -109,7 +110,7 @@ export default function TodoBox() {
         >
           Add +
         </button>
-      </form>
+      </Form>
       <div className="flex flex-col gap-2 w-11/12">
         {optimisticTodos.map((todo) => (
           <TodoItem
