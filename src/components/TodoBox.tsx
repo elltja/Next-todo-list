@@ -9,12 +9,7 @@ import React, {
 } from "react";
 import TodoItem from "./TodoItem";
 import { TodoType } from "@/types/types";
-import {
-  addAction,
-  deleteAction,
-  getAction,
-  toggleAction,
-} from "@/lib/actions";
+import { addAction, deleteAction, toggleAction } from "@/lib/actions";
 import Form from "next/form";
 
 export default function TodoBox() {
@@ -25,7 +20,7 @@ export default function TodoBox() {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await getAction();
+        const response = await fetch("/api/todos").then((res) => res.json());
         if (response?.data) {
           setTodos(response.data);
         } else {

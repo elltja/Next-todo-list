@@ -48,22 +48,6 @@ export const toggleAction = async (id: string, value: boolean) => {
   return data;
 };
 
-export const getAction = async () => {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-    error: userError,
-  } = await supabase.auth.getUser();
-
-  if (!user || userError) {
-    console.error(userError);
-    return;
-  }
-  const todos = await supabase.from("todos").select("*").eq("user_id", user.id);
-  return todos;
-};
-
 export const authenticateAction = async () => {
   const supabase = await createClient();
   const origin = (await headers()).get("origin");
